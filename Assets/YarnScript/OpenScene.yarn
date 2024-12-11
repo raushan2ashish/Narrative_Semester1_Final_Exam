@@ -5,8 +5,9 @@ tags:
 <<declare $packageIntact = true>>
 
 RoboScout:Ace, we’ve got a situation! Big Corp drones are scanning the area.
-<<change_background bgManager "beach">>
+<<change_background bgManager "buildings">>
 <<play_audio AudioManager "success">>
+<<change_character bgManager "harry">>
 Ace:Not exactly a relaxing start to the day. What’s in the package?
 ->Who sent it?  
     RoboScout: Our usual client. Doesn’t matter who—it’s what’s inside that counts.

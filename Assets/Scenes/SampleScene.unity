@@ -266,8 +266,8 @@ MonoBehaviour:
   backgroundRenderer: {fileID: 1329952689}
   characterRenderer: {fileID: 1514873391}
   backgroundSprites:
-  - {fileID: 21300000, guid: c67ed5c4d0004f24a80769a81e46f9c5, type: 3}
-  - {fileID: 21300000, guid: 9e5a1a3de5a08234fb17fea754378336, type: 3}
+  - {fileID: 21300000, guid: 5cae1ae73e3799f4387acb31e8934db3, type: 3}
+  - {fileID: 21300000, guid: 62b60a83b27bfb84f8cd90dcf71f20df, type: 3}
   characterSprites:
   - {fileID: 21300000, guid: 84e6ad55b62bc2f4ca6bc5693869d0ff, type: 3}
   - {fileID: 21300000, guid: 5766d31d6c527b8449c1951f6c77800e, type: 3}
@@ -327,6 +327,22 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.45911938
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292657645953925573, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3292657647476544605, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -359,6 +375,14 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: 68a083cfb5283484c9bbaff852e88c0c, type: 3}
+    - target: {fileID: 7778558434911714087, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434911714087, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4627451
+      objectReference: {fileID: 0}
     - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -642,7 +666,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -664,8 +688,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 16, y: 16, z: 16}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 171362937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
