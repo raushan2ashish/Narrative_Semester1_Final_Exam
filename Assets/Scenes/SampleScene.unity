@@ -228,6 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610912972}
+  - component: {fileID: 610912973}
   m_Layer: 0
   m_Name: bgManager
   m_TagString: Untagged
@@ -250,6 +251,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 171362937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &610912973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610912971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae850c202abfe8642b5254c4f95485be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundRenderer: {fileID: 1329952689}
+  characterRenderer: {fileID: 1514873391}
+  backgroundSprites:
+  - {fileID: 21300000, guid: c67ed5c4d0004f24a80769a81e46f9c5, type: 3}
+  - {fileID: 21300000, guid: 9e5a1a3de5a08234fb17fea754378336, type: 3}
+  characterSprites:
+  - {fileID: 21300000, guid: 84e6ad55b62bc2f4ca6bc5693869d0ff, type: 3}
+  - {fileID: 21300000, guid: 5766d31d6c527b8449c1951f6c77800e, type: 3}
 --- !u!1001 &984773020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -693,7 +714,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa721a9a9a612041a62520547d484e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 9d34a0be7370e4a47b8c18326653bc79, type: 3}
+  - {fileID: 8300000, guid: 564730aab81cac44d8f77429829e270c, type: 3}
 --- !u!82 &1819110505
 AudioSource:
   m_ObjectHideFlags: 0
