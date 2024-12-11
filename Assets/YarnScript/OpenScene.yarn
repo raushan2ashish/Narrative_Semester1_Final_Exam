@@ -3,7 +3,7 @@ tags:
 ---
 <<declare $routeChoice = false>>
 <<declare $packageIntact = true>>
-
+<<change_background bgManager "beach">>
 RoboScout:Ace, we’ve got a situation! Big Corp drones are scanning the area.
 
 Ace:Not exactly a relaxing start to the day. What’s in the package?
