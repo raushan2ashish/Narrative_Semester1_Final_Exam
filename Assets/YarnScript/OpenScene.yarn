@@ -1,0 +1,50 @@
+﻿title: OpenScene
+tags:
+---
+<<declare $routeChoice = false>>
+<<declare $packageIntact = true>>
+
+RoboScout:Ace, we’ve got a situation! Big Corp drones are scanning the area.
+
+Ace:Not exactly a relaxing start to the day. What’s in the package?
+->Who sent it?  
+    RoboScout: Our usual client. Doesn’t matter who—it’s what’s inside that counts.
+    Ace: I just hope it’s worth the risk.
+->Is it dangerous?
+    RoboScout: If it wasn’t, you wouldn’t be the one delivering it.
+    Ace: Great. Nothing like a side of danger with my cardio.
+RoboScout:The drones are blocking the main route. We need to decide quickly.
+->Take the risky shortcut
+    // Risky route adds tension and sets up future consequences
+    Ace: Let’s give them the slip. I live for danger!
+    RoboScout: Just don’t let the package fall!"  //potential damage to the package
+    <<set $routeChoice = true>>
+->Take the safe route.
+    // Safe route shows Ace’s more cautious side
+    Ace: Better safe than sorry. Let’s play it cool.
+    RoboScout: Safe doesn’t mean easy. Stay sharp! // Adds tension even for the safe route
+// Drones appear, and the player must decide how to handle them
+RoboScout: Drones spotted ahead! They’re scanning rooftops. What’s the plan?
+->Confront them.
+    // If the player chooses confrontation, the package takes damage, affecting the story
+    Ace: "Time to show Big Corp they can’t scare me!"
+    RoboScout: "Bold move. Let’s hope it works!"
+    <<set $packageIntact = false>> // Package takes damage
+->Evade them.
+    // Evading the drones reinforces RoboScout’s tactical mindset
+    Ace: "Let’s stay out of sight. No need to make noise."
+    RoboScout: "Smart. Follow my lead!"
+//ending Based on the player’s choices,
+<<if $packageIntact == true>>
+    // If the package is intact, the player is rewarded with positive feedback
+    RoboScout: "We made it without a scratch. Not bad, Ace!"
+    Ace: "Just another day on the job. Let’s get this delivery done."
+<<elseif $packageIntact == false>>
+    // If the package is damaged, the dialogue reflects the consequences
+    RoboScout: "That was reckless, Ace. The package took a hit!"
+    Ace: "Relax, it’s still intact… mostly."
+<<endif>>
+// Wrap up the cutscene, leaving the player intrigued about what happens next
+RoboScout: "The drop point is just ahead. Let’s finish this delivery before more trouble shows up."
+->End Cutscene. // Ends the Yarn script and transitions back to gameplay
+===
