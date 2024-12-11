@@ -46,4 +46,15 @@ public class BackgroundManager : MonoBehaviour
 
         Debug.LogError($"Character '{characterName}' not found in the characterSprites array.");
     }
+    // Command to exit Play Mode
+    [YarnCommand("exit_play_mode")]
+    public void ExitPlayMode()
+    {
+#if UNITY_EDITOR
+        // Exit Play Mode in the Unity Editor
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Debug.LogWarning("Exit Play Mode command only works in the Unity Editor.");
+#endif
+    }
 }
