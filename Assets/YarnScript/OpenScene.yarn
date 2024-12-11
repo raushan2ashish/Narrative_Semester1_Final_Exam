@@ -3,50 +3,70 @@ tags:
 ---
 <<declare $routeChoice = false>>
 <<declare $packageIntact = true>>
-
+<<play_audio AudioManager "robo1">>
 RoboScout:Ace, we’ve got a situation! Big Corp drones are scanning the area.
 <<change_background bgManager "buildings">>
-<<play_audio AudioManager "success">>
+
 <<change_character bgManager "harry">>
+<<play_audio AudioManager "ace1">>
 Ace:Not exactly a relaxing start to the day. What’s in the package?
 ->Who sent it?  
+    <<play_audio AudioManager "robo2">>
     RoboScout: Our usual client. Doesn’t matter who—it’s what’s inside that counts.
+    <<play_audio AudioManager "ace2">>
     Ace: I just hope it’s worth the risk.
 ->Is it dangerous?
+    <<play_audio AudioManager "robo3">>
     RoboScout: If it wasn’t, you wouldn’t be the one delivering it.
+    <<play_audio AudioManager "ace3">>
     Ace: Great. Nothing like a side of danger with my cardio.
+<<play_audio AudioManager "robo4">>
 RoboScout:The drones are blocking the main route. We need to decide quickly.
 ->Take the risky shortcut
     // Risky route adds tension and sets up future consequences
+    <<play_audio AudioManager "ace4">>
     Ace: Let’s give them the slip. I live for danger!
+    <<play_audio AudioManager "robo5">>
     RoboScout: Just don’t let the package fall!"  //potential damage to the package
     <<set $routeChoice = true>>
 ->Take the safe route.
     // Safe route shows Ace’s more cautious side
+    <<play_audio AudioManager "ace5">>
     Ace: Better safe than sorry. Let’s play it cool.
+    <<play_audio AudioManager "robo6">>
     RoboScout: Safe doesn’t mean easy. Stay sharp! // Adds tension even for the safe route
 // Drones appear, and the player must decide how to handle them
+<<play_audio AudioManager "robo7">>
 RoboScout: Drones spotted ahead! They’re scanning rooftops. What’s the plan?
 ->Confront them.
     // If the player chooses confrontation, the package takes damage, affecting the story
+    <<play_audio AudioManager "ace6">>
     Ace: "Time to show Big Corp they can’t scare me!"
+    <<play_audio AudioManager "robo8">>
     RoboScout: "Bold move. Let’s hope it works!"
     <<set $packageIntact = false>> // Package takes damage
 ->Evade them.
     // Evading the drones reinforces RoboScout’s tactical mindset
+    <<play_audio AudioManager "ace7">>
     Ace: "Let’s stay out of sight. No need to make noise."
+    <<play_audio AudioManager "robo9">>
     RoboScout: "Smart. Follow my lead!"
 //ending Based on the player’s choices,
 <<if $packageIntact == true>>
     // If the package is intact, the player is rewarded with positive feedback
+    <<play_audio AudioManager "robo10">>
     RoboScout: "We made it without a scratch. Not bad, Ace!"
+    <<play_audio AudioManager "ace8">>
     Ace: "Just another day on the job. Let’s get this delivery done."
 <<elseif $packageIntact == false>>
     // If the package is damaged, the dialogue reflects the consequences
+    <<play_audio AudioManager "robo11">>
     RoboScout: "That was reckless, Ace. The package took a hit!"
+    <<play_audio AudioManager "ace9">>
     Ace: "Relax, it’s still intact… mostly."
 <<endif>>
 // Wrap up the cutscene, leaving the player intrigued about what happens next
+<<play_audio AudioManager "robo12">>
 RoboScout: "The drop point is just ahead. Let’s finish this delivery before more trouble shows up."
 ->End Cutscene. // Ends the Yarn script and transitions back to gameplay
 ===
